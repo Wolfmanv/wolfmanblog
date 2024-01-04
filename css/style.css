@@ -255,10 +255,14 @@ nav ul .link:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem 10rem;
+  padding: 2rem 0rem;
+}
+.main .text .news__title {
+  font-size: 1.6rem;
+  margin: 16px;
 }
 .main .text p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 15px;
 }
 .main .text .quote {
