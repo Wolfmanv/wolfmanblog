@@ -47,7 +47,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url("/img/NIK_7984.jpg");
+  background-image: url("../img/NIK_7984.jpg");
   height: 1200px;
   width: 100%;
   background-position: center;
@@ -204,13 +204,13 @@ nav ul .link:hover {
   box-shadow: 1px 1px 5px var(--blue);
 }
 .main .one {
-  background-image: url("/img/NIK_0831.jpg");
+  background-image: url("../img/NIK_0831.jpg");
 }
 .main .two {
-  background-image: url("/img/F35-high-speed-pass.jpg");
+  background-image: url("../img/F35-high-speed-pass.jpg");
 }
 .main .three {
-  background-image: url("/img/wiewiórecka.jpg");
+  background-image: url("../img/wiewiórecka.jpg");
 }
 .main .photo-bg {
   position: absolute;
@@ -461,4 +461,4 @@ footer h2 {
   .main .text p {
     font-size: 1.3rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
