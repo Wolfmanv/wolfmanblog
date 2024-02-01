@@ -404,18 +404,35 @@ nav ul .link:hover {
   right: -150%;
 }
 
-footer {
+.footer {
+  display: flex;
+  position: relative;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: #1f2833;
   color: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-footer h2 {
-  font-size: 32px;
+.footer__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.footer__content h2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 1.7rem;
   text-shadow: 0px 0px 2px var(--cyna);
+}
+.footer__content #date-time {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 1220px) {
