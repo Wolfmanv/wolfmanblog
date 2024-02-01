@@ -32,13 +32,13 @@ function dropShadow() {
     navbar.classList.toggle('shadowBar')
 }
 
-const date = new Date();
-var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
+// const date = new Date();
+// var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
 
 
 
 
-document.getElementById('date-time').innerHTML = current_date;
+// document.getElementById('date-time').innerHTML = current_date;
 
 
 bar.addEventListener('click', dropNavbar)
