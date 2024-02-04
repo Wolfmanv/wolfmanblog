@@ -242,7 +242,6 @@ body {
 	.one {
 		background-image: url('../img/NIK_0831.jpg');
 		max-width: 90vw;
-		
 	}
 	.two {
 		background-image: url('../img/F35-high-speed-pass.jpg');
@@ -316,7 +315,6 @@ body {
 		.news__title {
 			font-size: 1.6rem;
 			margin: 2.5em 0;
-			
 		}
 
 		&__text {
@@ -374,6 +372,88 @@ body {
 			font-weight: bold;
 			text-decoration: underline;
 		}
+	}
+}
+
+.blog__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+
+	.blog__item {
+		position: relative;
+		margin: 0 2em;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		border: 2px black solid;
+		box-shadow: 1px 1px 4px var(--blue);
+		transition: transform 0.4s ease-in-out;
+
+		&:hover {
+			transform: scale(1.01);
+		}
+
+		&-heading {
+			padding: 1em;
+			margin: 1em 0;
+			font-size: 1.1rem;
+		}
+
+		&-text {
+			padding: 1em 1.1em;
+			font-size: 1.1rem;
+		}
+
+		&-link {
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+			margin: 1em;
+			
+		}
+
+		&-btn {
+			position: relative;
+			background-color: var(--blue);
+			color: #ddd;
+			width: 85%;
+			box-shadow: 1px 1px 4px var(--blue);
+			border-radius: 10px;
+			font-size: 1.5em;
+			font-weight: bold;
+			padding: 1em;
+			overflow: hidden;
+			cursor: pointer;
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 100px;
+				top: 0;
+				left: -40%;
+				background-image: linear-gradient(
+		-90deg,
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0)
+	);
+				// z-index: 10;
+				transition: left .5s ease-in-out;
+				
+
+			}
+
+			&:hover::after {
+				left: 100%;
+			}
+		}
+	}
+
+	.blog__item-img {
+		object-fit: contain;
 	}
 }
 
@@ -576,20 +656,21 @@ body {
 		.title-hd {
 			font-size: 1.4rem;
 		}
-	
 
-	.news {
-		padding: 1rem 1rem;
+		.news {
+			padding: 1rem 1rem;
 
-		&__text {
+			&__text {
+				font-size: 1.3rem;
+			}
+		}
+
+		.photo-text p {
 			font-size: 1.3rem;
 		}
-	}
 
-	.photo-text p {
-		font-size: 1.3rem;
+		
 	}
-}
 }
 
 @media (max-width: 576px) {
@@ -609,14 +690,36 @@ body {
 		.title-hd {
 			font-size: 1.4rem;
 		}
-	
 
-	.news {
-		padding: 1rem 1rem;
+		.news {
+			padding: 1rem 1rem;
 
-		&__text {
-			font-size: 1.3rem;
+			&__text {
+				font-size: 1.3rem;
+			}
 		}
+
+	.blog__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.blog__item {
+			width: 100%;
+			margin: 1em 1em;
+
+			&-heading {
+				font-size: 2em;
+			}
+
+			&-text {
+				font-size: 1.5em;
+			}
+		}
+	
 	}
-	}
+
+
+}
 }
