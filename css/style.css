@@ -22,12 +22,6 @@ body {
   flex-direction: column;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
 .hamburger {
   color: #fff;
   justify-content: flex-end;
@@ -85,17 +79,18 @@ body {
   height: 100%;
 }
 
-nav {
+.nav {
   position: fixed;
   display: flex;
   height: 60px;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 20;
 }
-nav .logo {
+.nav .logo {
+  max-width: 300px;
   font-size: 1.3rem;
   color: #42bff5;
   margin-left: 15px;
@@ -104,22 +99,20 @@ nav .logo {
   align-self: flex-start;
   margin-right: auto;
 }
-nav .logo h1 {
+.nav .logo h1 {
   font-size: 25px;
 }
-nav .logo h1 span {
+.nav .logo h1 span {
   text-transform: uppercase;
   color: lightcyan;
 }
-nav ul {
-  position: relative;
+.nav .navbar {
   list-style: none;
   display: flex;
   justify-content: space-around;
   transition: 0.3s linear;
-  position: absolute;
 }
-nav ul .link {
+.nav .navbar .link {
   position: relative;
   height: 60px;
   line-height: 60px;
@@ -132,7 +125,7 @@ nav ul .link {
   transition: color 0.3s linear;
   z-index: 10;
 }
-nav ul .link::after {
+.nav .navbar .link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -143,10 +136,10 @@ nav ul .link::after {
   transition: height 0.4s ease-in-out;
   z-index: -5;
 }
-nav ul .link:hover::after {
+.nav .navbar .link:hover::after {
   height: 100%;
 }
-nav ul .link:hover {
+.nav .navbar .link:hover {
   color: black;
   font-weight: bold;
   text-shadow: 0px 0px 1px black;
@@ -155,7 +148,7 @@ nav ul .link:hover {
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1200px;
 }
 
 .underline {
@@ -257,7 +250,7 @@ nav ul .link:hover {
 .main .contact i:hover {
   color: #1f2833;
 }
-.main .text {
+.main .news {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -265,31 +258,35 @@ nav ul .link:hover {
   align-items: flex-start;
   padding: 2rem 0rem;
 }
-.main .text .news__title {
+.main .news .news__title {
   font-size: 1.6rem;
-  margin: 16px;
+  margin: 2.5em 0;
 }
-.main .text p {
+.main .news__text {
   font-size: 1.4rem;
   margin: 15px;
+  line-height: 2em;
 }
-.main .text .quote {
+.main .news .quote {
   font-style: italic;
+  font-size: 1.4rem;
+  margin: 2em 0;
 }
-.main .text span {
+.main .news span {
   color: cadetblue;
+  font-size: 1rem;
 }
-.main .text .quote::before {
+.main .news .quote::before {
   content: open-quote;
   font-size: 3rem;
   color: cadetblue;
 }
-.main .text .quote::after {
+.main .news .quote::after {
   content: close-quote;
   font-size: 3rem;
   color: cadetblue;
 }
-.main .text .zdj-image {
+.main .news .zdj-image {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -298,17 +295,18 @@ nav ul .link:hover {
   justify-content: center;
   align-items: center;
 }
-.main .text .zdj-image img {
+.main .news .zdj-image img {
   width: 100%;
   box-shadow: 0px 0px 3px var(--blue);
 }
-.main .text .zdj-image figcaption {
+.main .news .zdj-image figcaption {
   margin: 9px;
   font-size: 14px;
 }
-.main .text .date-time {
+.main .news .date-time {
   font-size: 16px;
   letter-spacing: 2px;
+  margin-left: 0;
   color: var(--blue);
   font-weight: bold;
   text-decoration: underline;
@@ -441,11 +439,13 @@ nav ul .link:hover {
 }
 @media (max-width: 992px) {
   ul {
+    position: absolute;
+    top: 60px;
+    height: 100vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
-    top: 60px;
-    background: var(--blue);
+    background: rgba(0, 0, 0, 0.9);
     transform: translate(100%);
   }
   ul li {
@@ -454,12 +454,6 @@ nav ul .link:hover {
   }
   ul li:hover {
     background-color: darkcyan;
-  }
-  .shadowBar {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 40vh;
-    z-index: 20;
-    transition: 0.5s ease-in-out;
   }
   .active {
     transform: translate(0%);
@@ -474,19 +468,19 @@ nav ul .link:hover {
   .main .title-hd {
     font-size: 1.4rem;
   }
-  .text {
+  .main .news {
     padding: 1rem 1rem;
   }
-  .text p {
+  .main .news__text {
     font-size: 1.3rem;
   }
-  .photo-text p {
+  .main .photo-text p {
     font-size: 1.3rem;
   }
 }
 @media (max-width: 576px) {
   .hero-img .hero-text h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .hero-img .hero-text p {
     font-size: 1rem;
@@ -494,7 +488,10 @@ nav ul .link:hover {
   .main .title-hd {
     font-size: 1.4rem;
   }
-  .main .photo-text p {
-    font-size: 1rem;
+  .main .news {
+    padding: 1rem 1rem;
+  }
+  .main .news__text {
+    font-size: 1.3rem;
   }
 }

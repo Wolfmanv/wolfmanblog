@@ -19,15 +19,8 @@ body {
 	font-size: 62.5%;
 	display: flex;
 	flex-direction: column;
-	
 
 	// overflow: hidden;
-}
-
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
 }
 
 .hamburger {
@@ -91,17 +84,18 @@ body {
 	height: 100%;
 }
 
-nav {
+.nav {
 	position: fixed;
 	display: flex;
 	height: 60px;
 	width: 100%;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 20;
 
 	.logo {
+		max-width: 300px;
 		font-size: 1.3rem;
 		color: #42bff5;
 		margin-left: 15px;
@@ -121,13 +115,11 @@ nav {
 		}
 	}
 
-	ul {
-		position: relative;
+	.navbar {
 		list-style: none;
 		display: flex;
 		justify-content: space-around;
 		transition: 0.3s linear;
-		position: absolute;
 
 		.link {
 			position: relative;
@@ -193,7 +185,7 @@ nav {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1700px;
+	max-width: 1200px;
 }
 
 .underline {
@@ -209,7 +201,6 @@ nav {
 	color: black;
 	display: flex;
 	flex-direction: column;
-	
 
 	.zdjecia {
 		display: flex;
@@ -251,6 +242,7 @@ nav {
 	.one {
 		background-image: url('../img/NIK_0831.jpg');
 		max-width: 90vw;
+		
 	}
 	.two {
 		background-image: url('../img/F35-high-speed-pass.jpg');
@@ -313,7 +305,7 @@ nav {
 		}
 	}
 
-	.text {
+	.news {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -323,18 +315,23 @@ nav {
 
 		.news__title {
 			font-size: 1.6rem;
-			margin: 16px;
+			margin: 2.5em 0;
+			
 		}
 
-		p {
+		&__text {
 			font-size: 1.4rem;
 			margin: 15px;
+			line-height: 2em;
 		}
 		.quote {
 			font-style: italic;
+			font-size: 1.4rem;
+			margin: 2em 0;
 		}
 		span {
 			color: cadetblue;
+			font-size: 1rem;
 		}
 
 		.quote::before {
@@ -372,7 +369,7 @@ nav {
 		.date-time {
 			font-size: 16px;
 			letter-spacing: 2px;
-
+			margin-left: 0;
 			color: var(--blue);
 			font-weight: bold;
 			text-decoration: underline;
@@ -501,7 +498,6 @@ nav {
 	height: 70px;
 	background-color: #1f2833;
 	color: #ddd;
-	
 
 	&__content {
 		position: relative;
@@ -537,12 +533,13 @@ nav {
 
 @media (max-width: 992px) {
 	ul {
+		position: absolute;
+		top: 60px;
+		height: 100vh;
 		width: 50vw;
 		display: flex;
 		flex-direction: column;
-
-		top: 60px;
-		background: var(--blue);
+		background: rgba(0, 0, 0, 0.9);
 		transform: translate(100%);
 
 		li {
@@ -555,12 +552,12 @@ nav {
 		}
 	}
 
-	.shadowBar {
-		background-color: rgba(0, 0, 0, 0.7);
-		height: 40vh;
-		z-index: 20;
-		transition: 0.5s ease-in-out;
-	}
+	// .shadowBar {
+	// 	background-color: rgba(0, 0, 0, 0.7);
+	// 	height: 60vh;
+	// 	z-index: 20;
+	// 	transition: 0.5s ease-in-out;
+	// }
 
 	.active {
 		transform: translate(0%);
@@ -576,52 +573,50 @@ nav {
 	}
 
 	.main {
-
-			.title-hd {
-				font-size: 1.4rem;
-			}
+		.title-hd {
+			font-size: 1.4rem;
 		}
+	
 
-		.text {
-			padding: 1rem 1rem;
+	.news {
+		padding: 1rem 1rem;
 
-			p {
-				font-size: 1.3rem;
-			}
-		}
-
-		.photo-text p{
+		&__text {
 			font-size: 1.3rem;
 		}
 	}
 
+	.photo-text p {
+		font-size: 1.3rem;
+	}
+}
+}
 
 @media (max-width: 576px) {
+	.hero-img {
+		.hero-text {
+			h2 {
+				font-size: 2.2rem;
+			}
 
-.hero-img {
-	.hero-text {
-
-		h2 {
-			font-size: 2rem;
+			p {
+				font-size: 1rem;
+			}
 		}
+	}
 
-		p {
-			font-size: 1rem;
+	.main {
+		.title-hd {
+			font-size: 1.4rem;
 		}
-	}
-}
-
-
-.main {
-	.title-hd {
-		font-size: 1.4rem;
-	}
-
-	.photo-text p{
-		font-size: 1rem;
-	}
-}
-
-
-}
 	
+
+	.news {
+		padding: 1rem 1rem;
+
+		&__text {
+			font-size: 1.3rem;
+		}
+	}
+	}
+}
