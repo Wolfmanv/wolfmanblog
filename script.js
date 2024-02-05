@@ -30,4 +30,3 @@ function rotateBurger() {
 
 bar.addEventListener('click', dropNavbar);
 button.addEventListener('click', rotateBurger);
-bar.addEventListener('click', dropShadow);
