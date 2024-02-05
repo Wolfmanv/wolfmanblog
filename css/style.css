@@ -81,51 +81,49 @@ body {
 
 .nav {
   position: fixed;
-  display: flex;
   height: 60px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 20;
 }
-.nav .logo {
-  max-width: 300px;
+.nav .nav__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav .nav__container .logo {
   font-size: 1.3rem;
   color: #42bff5;
-  margin-left: 15px;
-  margin-top: 15px;
   letter-spacing: 1px;
-  align-self: flex-start;
-  margin-right: auto;
 }
-.nav .logo h1 {
+.nav .nav__container .logo h1 {
   font-size: 25px;
 }
-.nav .logo h1 span {
+.nav .nav__container .logo h1 span {
   text-transform: uppercase;
   color: lightcyan;
 }
-.nav .navbar {
+.nav .nav__container .navbar {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   transition: 0.3s linear;
 }
-.nav .navbar .link {
+.nav .nav__container .navbar .link {
   position: relative;
   height: 60px;
   line-height: 60px;
   display: block;
   text-decoration: none;
   color: #ddd;
-  margin-right: 30px;
+  margin: 0 1em;
   padding: 2px 20px;
   font-size: 1.3rem;
   transition: color 0.3s linear;
   z-index: 10;
 }
-.nav .navbar .link::after {
+.nav .nav__container .navbar .link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -136,10 +134,10 @@ body {
   transition: height 0.4s ease-in-out;
   z-index: -5;
 }
-.nav .navbar .link:hover::after {
+.nav .nav__container .navbar .link:hover::after {
   height: 100%;
 }
-.nav .navbar .link:hover {
+.nav .nav__container .navbar .link:hover {
   color: black;
   font-weight: bold;
   text-shadow: 0px 0px 1px black;
