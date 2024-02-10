@@ -328,8 +328,7 @@ body {
   transform: scale(1.01);
 }
 .main .blog__container .blog__item-heading {
-  padding: 1em;
-  margin: 1em 0;
+  padding: 1em 1em;
   font-size: 1.1rem;
 }
 .main .blog__container .blog__item-text {
@@ -370,6 +369,8 @@ body {
   left: 100%;
 }
 .main .blog__container .blog__item-img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 50%;
 }
 .main .carousel-section {
@@ -503,7 +504,7 @@ body {
     top: 60px;
     right: 0;
     height: 100vh;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -512,8 +513,7 @@ body {
   }
   .nav .nav__container .navbar .link {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
   }
   .nav .nav__container .navbar .link:hover {
     background-color: darkcyan;
@@ -524,17 +524,36 @@ body {
   .nav .nav__container .link::after {
     opacity: 0;
   }
-  .nav .nav__container .main .title-hd {
+  .main .title-hd {
     font-size: 1.4rem;
   }
-  .nav .nav__container .main .news {
+  .main .news {
     padding: 1rem 1rem;
   }
-  .nav .nav__container .main .news__text {
+  .main .news__text {
     font-size: 1.3rem;
   }
-  .nav .nav__container .main .photo-text p {
+  .main .photo-text p {
     font-size: 1.3rem;
+  }
+  .main .blog__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .blog__container .blog__item {
+    width: 100%;
+    margin: 1em 1em;
+  }
+  .main .blog__container .blog__item-heading {
+    font-size: 2em;
+  }
+  .main .blog__container .blog__item-text {
+    font-size: 1.5em;
+  }
+  .main .blog__container .blog__item-btn {
+    width: 50%;
   }
 }
 @media (max-width: 576px) {
@@ -554,6 +573,9 @@ body {
     align-items: center;
     background: rgba(0, 0, 0, 0.9);
     transform: translate(100%);
+  }
+  .nav .nav__container .navbar .link {
+    display: flex;
   }
   .nav .nav__container .active {
     transform: translate(0%);
