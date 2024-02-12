@@ -260,7 +260,7 @@ body {
 }
 .main .news__text {
   font-size: 1.4rem;
-  margin: 15px;
+  margin: 15px 0;
   line-height: 2em;
 }
 .main .news .quote {

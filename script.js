@@ -8,6 +8,8 @@ const shadow = document.querySelector('.shadowBar');
 
 const button = document.querySelector('i');
 
+const menuItem = document.querySelectorAll('.link');
+
 function dropNavbar() {
 	navbar.classList.toggle('active');
 }
@@ -19,6 +21,9 @@ function rotateBurger() {
 	}
 }
 
+menuItem.forEach(function (menuItem) {
+	menuItem.addEventListener('click', dropNavbar);
+});
 // function dropShadow() {
 // 	navbar.classList.toggle('shadowBar');
 // }
