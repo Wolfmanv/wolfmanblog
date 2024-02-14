@@ -227,24 +227,75 @@ body {
   padding: 30px 100px;
   font-size: 1.5rem;
 }
-.main .contact {
-  font-size: 32px;
+.main .contact-form {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
-.main .contact p {
-  margin: 20px;
+.main .contact-form-heading {
+  font-size: 2.5em;
+  margin-bottom: 1em;
 }
-.main .contact a {
-  text-decoration: none;
-  color: royalblue;
+.main .contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 1em;
 }
-.main .contact i {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  transition: color 0.3s;
+.main .contact-form form input {
+  padding: 1em;
+  width: 70%;
+  min-width: 100px;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  background-color: #fff;
+  outline: none;
+  font-size: 1.5em;
 }
-.main .contact i:hover {
-  color: #1f2833;
+.main .contact-form form input:first-child {
+  width: 20%;
+}
+.main .contact-form form input:focus {
+  border: 2px black solid;
+}
+.main .contact-form form .textarea {
+  margin: 1.5em 0;
+  width: 70%;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 2.2em;
+}
+.main .contact-form .send-btn {
+  position: relative;
+  width: 20%;
+  min-width: 85px;
+  padding: 1em 0.5em;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  color: #ddd;
+  overflow: hidden;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.main .contact-form .send-btn::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.178);
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+.main .contact-form .send-btn:hover::after {
+  transform: translateX(300%);
 }
 .main .news {
   width: 100%;
@@ -368,50 +419,10 @@ body {
 .main .blog__container .blog__item-btn:hover::after {
   left: 100%;
 }
-.main .blog__container .blog__item-img {
+.main .blog__container .blog__item .blog__item-img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 50%;
-}
-.main .carousel-section {
-  padding: 3rem;
-}
-.main .carousel-section .slider-wrapper {
-  position: relative;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-.main .carousel-section .slider-wrapper .slider-nav {
-  display: flex;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 1;
-}
-.main .carousel-section .slider-wrapper .slider-nav a {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.75;
-  transition: opacity ease 0.4s;
-}
-.main .carousel-section .slider-wrapper .slider-nav a:hover {
-  opacity: 1;
-}
-.main .carousel-section .slider {
-  display: flex;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.3) img;
-  box-shadow-flex: 1 0 100%;
-  box-shadow-scroll-snap-align: start;
-  box-shadow-object-fit: cover;
 }
 .main .btn {
   position: relative;
