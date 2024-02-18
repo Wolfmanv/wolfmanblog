@@ -258,7 +258,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2em;
+		gap: 3em;
 
 		&-heading {
 			font-size: 2.5em;
@@ -270,7 +270,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			gap: 2em;
+			gap: 3em;
 			padding: 1em;
 
 			input {
@@ -293,7 +293,6 @@ body {
 			}
 
 			.textarea {
-				margin: 1.5em 0;
 				width: 70%;
 				border-radius: 5px;
 				padding: 0.5em 1em;
@@ -304,14 +303,14 @@ body {
 			position: relative;
 			width: 20%;
 			min-width: 85px;
-			padding: 1em 0.5em;
+			padding: 1em 0.2em;
 			background-color: var(--blue);
 			border: 1px solid var(--blue);
 			border-radius: 8px;
 			color: #ddd;
 			overflow: hidden;
-			letter-spacing: 1px;
-			font-size: 1rem;
+			letter-spacing: 2px;
+			font-size: 1.2rem;
 			cursor: pointer;
 		}
 
@@ -322,7 +321,7 @@ body {
 			top: 0;
 			width: 50%;
 			height: 100%;
-			background-color: rgba(192, 192, 192, 0.178);
+			background-color: rgba(245, 243, 243, 0.094);
 			transform: translateX(0%);
 			transition: transform 0.5s ease-in-out;
 		}
