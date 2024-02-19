@@ -1,7 +1,6 @@
-:root {
-	--blue: #1f2833;
-	--cyna: #42bff5;
-}
+@use 'components' as *;
+@use 'colors' as *;
+@use 'media' as *;
 
 * {
 	box-sizing: border-box;
@@ -21,11 +20,6 @@ body {
 	// flex-direction: column;
 
 	// overflow: hidden;
-}
-
-.hamburger:hover {
-	color: var(--cyna);
-	cursor: pointer;
 }
 
 .fa-solid {
@@ -53,11 +47,11 @@ body {
 		text-shadow: 0px 0px 3px #ddd;
 
 		h2 {
-			color: #fff;
+			color: $pale-blue;
 			font-size: 3rem;
 
 			span {
-				color: var(--cyna);
+				color: $light-blue;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 			}
@@ -95,7 +89,7 @@ body {
 
 		.logo {
 			font-size: 2em;
-			color: #42bff5;
+			color: $light-blue;
 			letter-spacing: 1px;
 
 			h1 {
@@ -104,7 +98,7 @@ body {
 				span {
 					text-transform: uppercase;
 
-					color: lightcyan;
+					color: $pale-blue;
 				}
 			}
 		}
@@ -159,18 +153,6 @@ body {
 		}
 	}
 }
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
-
-.underline {
-	color: var(--cyna);
-	height: 5px;
-	width: 60px;
-	margin: 30px;
-}
 
 .main {
 	background-color: #ddd;
@@ -194,13 +176,6 @@ body {
 		margin-top: 100px;
 	}
 
-	.underline {
-		width: 200px;
-		height: 4px;
-		margin: 0 auto 40px;
-		background-color: #42bff5;
-	}
-
 	p {
 		margin: 0 auto;
 	}
@@ -214,7 +189,7 @@ body {
 		transition: rotate 2s;
 		margin-bottom: 50px;
 		// background-attachment: fixed;
-		box-shadow: 1px 1px 5px var(--blue);
+		box-shadow: 1px 1px 5px $dark-blue;
 	}
 	.one {
 		background-image: url('../img/NIK_0831.jpg');
@@ -304,8 +279,8 @@ body {
 			width: 20%;
 			min-width: 85px;
 			padding: 1em 0.2em;
-			background-color: var(--blue);
-			border: 1px solid var(--blue);
+			background-color: #1f2833;
+			border: 1px solid #1f2833;
 			border-radius: 8px;
 			color: #ddd;
 			overflow: hidden;
@@ -392,6 +367,15 @@ body {
 			color: cadetblue;
 		}
 
+		.date-time {
+			font-size: 16px;
+			letter-spacing: 2px;
+			margin-left: 0;
+			color: var(--blue);
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
 		.zdj-image {
 			width: 100%;
 			margin-top: 30px;
@@ -403,22 +387,13 @@ body {
 
 			img {
 				width: 100%;
-				box-shadow: 0px 0px 3px var(--blue);
+				box-shadow: 0px 0px 3px $dark-blue;
 			}
 
 			figcaption {
 				margin: 9px;
 				font-size: 1rem;
 			}
-		}
-
-		.date-time {
-			font-size: 16px;
-			letter-spacing: 2px;
-			margin-left: 0;
-			color: var(--blue);
-			font-weight: bold;
-			text-decoration: underline;
 		}
 	}
 
@@ -436,7 +411,7 @@ body {
 			width: 30%;
 			height: auto;
 			border: 1px black solid;
-			box-shadow: 0px 0px 8px var(--blue);
+			box-shadow: 0px 0px 8px $dark-blue;
 			transition: transform 0.4s ease-in-out;
 
 			&:hover {
@@ -463,10 +438,10 @@ body {
 
 			&-btn {
 				position: relative;
-				background-color: var(--blue);
+				background-color: $dark-blue;
 				color: #ddd;
 				width: 85%;
-				box-shadow: 1px 1px 4px var(--blue);
+				box-shadow: 1px 1px 4px $dark-blue;
 				border-radius: 10px;
 				font-size: 1.5em;
 				font-weight: bold;
@@ -508,7 +483,7 @@ body {
 		font-size: 24px;
 		padding: 15px;
 		text-transform: uppercase;
-		background-image: linear-gradient(to bottom left, var(--cyna), var(--blue));
+		background-image: linear-gradient(to bottom left, $light-blue, $dark-blue);
 		color: #fff;
 		border-radius: 10px;
 		box-shadow: 0px 0px 6px black;
@@ -576,7 +551,7 @@ body {
 	position: relative;
 	width: 100%;
 	height: 70px;
-	background-color: #1f2833;
+	background-color: $dark-blue;
 	color: #ddd;
 
 	&__content {
@@ -590,7 +565,7 @@ body {
 			transform: translate(-50%, -50%);
 			left: 50%;
 			font-size: 1.7rem;
-			text-shadow: 0px 0px 2px var(--cyna);
+			text-shadow: 0px 0px 2px cyan;
 		}
 	}
 }
@@ -626,7 +601,7 @@ body {
 				}
 
 				.link:hover {
-					background-color: darkcyan;
+					background-color: $light-blue;
 				}
 			}
 
@@ -752,7 +727,7 @@ body {
 
 				img {
 					width: 100%;
-					box-shadow: 0px 0px 3px var(--blue);
+					box-shadow: 0px 0px 3px $dark-blue;
 				}
 
 				figcaption {

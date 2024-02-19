@@ -1,7 +1,20 @@
 @charset "UTF-8";
-:root {
-  --blue: #1f2833;
-  --cyna: #42bff5;
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hamburger .fa-solid:hover {
+  color: #42bff5;
+  cursor: pointer;
+}
+
+.underline {
+  width: 200px;
+  height: 4px;
+  margin: 0 auto 40px;
+  background-color: #42bff5;
 }
 
 * {
@@ -18,11 +31,6 @@ body {
   background-color: #ddd;
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
-}
-
-.hamburger:hover {
-  color: var(--cyna);
-  cursor: pointer;
 }
 
 .fa-solid {
@@ -50,11 +58,11 @@ body {
   text-shadow: 0px 0px 3px #ddd;
 }
 .hero-img .hero-text h2 {
-  color: #fff;
+  color: lightcyan;
   font-size: 3rem;
 }
 .hero-img .hero-text h2 span {
-  color: var(--cyna);
+  color: #42bff5;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -141,19 +149,6 @@ body {
   margin: 20px;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.underline {
-  color: var(--cyna);
-  height: 5px;
-  width: 60px;
-  margin: 30px;
-}
-
 .main {
   background-color: #ddd;
   width: 100%;
@@ -174,12 +169,6 @@ body {
   margin-bottom: 10px;
   margin-top: 100px;
 }
-.main .underline {
-  width: 200px;
-  height: 4px;
-  margin: 0 auto 40px;
-  background-color: #42bff5;
-}
 .main p {
   margin: 0 auto;
 }
@@ -191,7 +180,7 @@ body {
   background-position: center;
   transition: rotate 2s;
   margin-bottom: 50px;
-  box-shadow: 1px 1px 5px var(--blue);
+  box-shadow: 1px 1px 5px #1f2833;
 }
 .main .one {
   background-image: url("../img/NIK_0831.jpg");
@@ -273,8 +262,8 @@ body {
   width: 20%;
   min-width: 85px;
   padding: 1em 0.2em;
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
+  background-color: #1f2833;
+  border: 1px solid #1f2833;
   border-radius: 8px;
   color: #ddd;
   overflow: hidden;
@@ -332,6 +321,14 @@ body {
   font-size: 3rem;
   color: cadetblue;
 }
+.main .news .date-time {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-left: 0;
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: underline;
+}
 .main .news .zdj-image {
   width: 100%;
   margin-top: 30px;
@@ -343,19 +340,11 @@ body {
 }
 .main .news .zdj-image img {
   width: 100%;
-  box-shadow: 0px 0px 3px var(--blue);
+  box-shadow: 0px 0px 3px #1f2833;
 }
 .main .news .zdj-image figcaption {
   margin: 9px;
   font-size: 1rem;
-}
-.main .news .date-time {
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin-left: 0;
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: underline;
 }
 .main .blog__container {
   width: 100%;
@@ -371,7 +360,7 @@ body {
   width: 30%;
   height: auto;
   border: 1px black solid;
-  box-shadow: 0px 0px 8px var(--blue);
+  box-shadow: 0px 0px 8px #1f2833;
   transition: transform 0.4s ease-in-out;
 }
 .main .blog__container .blog__item:hover {
@@ -394,10 +383,10 @@ body {
 }
 .main .blog__container .blog__item-btn {
   position: relative;
-  background-color: var(--blue);
+  background-color: #1f2833;
   color: #ddd;
   width: 85%;
-  box-shadow: 1px 1px 4px var(--blue);
+  box-shadow: 1px 1px 4px #1f2833;
   border-radius: 10px;
   font-size: 1.5em;
   font-weight: bold;
@@ -429,7 +418,7 @@ body {
   font-size: 24px;
   padding: 15px;
   text-transform: uppercase;
-  background-image: linear-gradient(to bottom left, var(--cyna), var(--blue));
+  background-image: linear-gradient(to bottom left, #42bff5, #1f2833);
   color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 6px black;
@@ -496,7 +485,7 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   font-size: 1.7rem;
-  text-shadow: 0px 0px 2px var(--cyna);
+  text-shadow: 0px 0px 2px cyan;
 }
 
 @media (min-width: 992px) {
@@ -526,7 +515,7 @@ body {
     justify-content: center;
   }
   .nav .nav__container .navbar .link:hover {
-    background-color: darkcyan;
+    background-color: #42bff5;
   }
   .nav .nav__container .active {
     transform: translate(0%);
@@ -620,7 +609,7 @@ body {
   }
   .main .news .zdj-image img {
     width: 100%;
-    box-shadow: 0px 0px 3px var(--blue);
+    box-shadow: 0px 0px 3px #1f2833;
   }
   .main .news .zdj-image figcaption {
     margin: 9px;
