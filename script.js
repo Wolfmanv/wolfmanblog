@@ -10,6 +10,8 @@ const button = document.querySelector('i');
 
 const menuItem = document.querySelectorAll('.link');
 
+const nav = document.querySelector('.nav')
+
 function dropNavbar() {
 	navbar.classList.toggle('active');
 }
@@ -24,14 +26,15 @@ function rotateBurger() {
 menuItem.forEach(function (menuItem) {
 	menuItem.addEventListener('click', dropNavbar);
 });
-// function dropShadow() {
-// 	navbar.classList.toggle('shadowBar');
+
+// const navShadow = () => {
+// 	if(window.scrollY >= 1000) {
+// 		nav.classList.add('navbar__color')
+// } else {
+// 	nav.classList.remove('navbar__color')
 // }
-
-// const date = new Date();
-// var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
-
-// document.getElementById('date-time').innerHTML = current_date;
+// }
 
 bar.addEventListener('click', dropNavbar);
 button.addEventListener('click', rotateBurger);
+// window.addEventListener('scroll', navShadow)

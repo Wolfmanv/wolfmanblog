@@ -17,6 +17,10 @@
   background-color: #42bff5;
 }
 
+.navbar__color {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,7 +45,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url("../img/NIK_7984.jpg");
+  background-image: url("../img/NIK_4566.jpg");
   height: 80vh;
   width: 100%;
   background-position: center;
@@ -55,11 +59,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-shadow: 0px 0px 3px #ddd;
+  text-shadow: 0px 0px 4px #ddd;
 }
 .hero-img .hero-text h2 {
   color: lightcyan;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .hero-img .hero-text h2 span {
   color: #42bff5;
@@ -81,37 +85,37 @@ body {
   position: fixed;
   height: 60px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
-.nav .nav__container {
+.nav__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.nav .nav__container .hamburger {
+.nav__container .hamburger {
   font-size: 1.5em;
 }
-.nav .nav__container .logo {
+.nav__container .logo {
   font-size: 2em;
   color: #42bff5;
   letter-spacing: 1px;
 }
-.nav .nav__container .logo h1 {
+.nav__container .logo h1 {
   font-size: 25px;
 }
-.nav .nav__container .logo h1 span {
+.nav__container .logo h1 span {
   text-transform: uppercase;
   color: lightcyan;
 }
-.nav .nav__container .navbar {
+.nav__container .navbar {
   list-style: none;
   display: flex;
   justify-content: flex-end;
   transition: 0.3s linear;
 }
-.nav .nav__container .navbar .link {
+.nav__container .navbar .link {
   position: relative;
   height: 60px;
   line-height: 60px;
@@ -124,7 +128,7 @@ body {
   transition: color 0.3s linear;
   z-index: 10;
 }
-.nav .nav__container .navbar .link::after {
+.nav__container .navbar .link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -135,15 +139,15 @@ body {
   transition: height 0.4s ease-in-out;
   z-index: -5;
 }
-.nav .nav__container .navbar .link:hover::after {
+.nav__container .navbar .link:hover::after {
   height: 100%;
 }
-.nav .nav__container .navbar .link:hover {
+.nav__container .navbar .link:hover {
   color: black;
   font-weight: bold;
   text-shadow: 0px 0px 1px black;
 }
-.nav .nav__container .hamburger {
+.nav__container .hamburger {
   color: #fff;
   justify-content: flex-end;
   margin: 20px;
@@ -175,7 +179,7 @@ body {
 .main .photo {
   position: relative;
   width: 1600px;
-  height: 700px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   transition: rotate 2s;
@@ -215,6 +219,7 @@ body {
   color: #ddd;
   padding: 30px 100px;
   font-size: 1.5rem;
+  overflow: hidden;
 }
 .main .contact-form {
   position: relative;
@@ -401,6 +406,7 @@ body {
   width: 100px;
   top: 0;
   left: -40%;
+  rotate: -45deg;
   background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   transition: left 0.5s ease-in-out;
 }
@@ -533,7 +539,7 @@ body {
     font-size: 1.3rem;
   }
   .main .photo-text p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .main .blog__container {
     width: 100%;
@@ -581,7 +587,7 @@ body {
   }
   .hero-img {
     height: 60vh;
-    background-image: url("../../img/Typhoon-mobile3.jpg");
+    background-image: url("../img/heo-sml.jpg");
   }
   .hero-img .hero-text h2 {
     font-size: 2.2rem;
@@ -596,7 +602,7 @@ body {
     padding: 1rem 1rem;
   }
   .main .news__text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .main .news .zdj-image {
     width: 100%;
@@ -613,6 +619,9 @@ body {
   }
   .main .news .zdj-image figcaption {
     margin: 9px;
+    font-size: 0.8rem;
+  }
+  .main .photo .photo-text p {
     font-size: 0.8rem;
   }
   .main .blog__container {
