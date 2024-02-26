@@ -1,8 +1,6 @@
 @use 'components' as *;
 @use 'colors' as *;
 
-
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -17,15 +15,16 @@ body {
 	background-color: #ddd;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 62.5%;
-	// display: flex;
-	// flex-direction: column;
-
-	// overflow: hidden;
+	
 }
 
 .fa-solid {
 	transition: 0.3s;
 }
+
+// HERO GRAFIKA
+// 
+// 
 
 .hero-img {
 	position: relative;
@@ -71,6 +70,11 @@ body {
 		height: 100%;
 	}
 }
+
+// NAWIGACJA
+// 
+// 
+
 .nav {
 	position: fixed;
 	height: 60px;
@@ -79,6 +83,7 @@ body {
 	z-index: 20;
 
 	&__container {
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -105,15 +110,17 @@ body {
 		}
 
 		.navbar {
-			list-style: none;
 			display: flex;
 			justify-content: flex-end;
+			align-items: center;
+			list-style: none;
 			transition: 0.3s linear;
 
-			.link {
+		
+
+			&__link {
 				position: relative;
-				height: 60px;
-				line-height: 60px;
+				height: 100%;
 				display: block;
 				text-decoration: none;
 				color: #ddd;
@@ -122,9 +129,9 @@ body {
 				font-size: 1.3rem;
 				transition: color 0.3s linear;
 				z-index: 10;
-			}
+			
 
-			.link::after {
+			&::after {
 				content: '';
 				position: absolute;
 				bottom: 0;
@@ -136,17 +143,17 @@ body {
 				z-index: -5;
 			}
 
-			.link:hover::after {
+			&:hover::after {
 				height: 100%;
 			}
 
-			.link:hover {
+			&:hover {
 				color: black;
 				font-weight: bold;
 				text-shadow: 0px 0px 1px black;
 			}
 		}
-
+	}
 		.hamburger {
 			color: #fff;
 			justify-content: flex-end;
@@ -154,6 +161,10 @@ body {
 		}
 	}
 }
+
+// Sekcja Main
+// 
+// 
 
 .main {
 	background-color: #ddd;
@@ -181,54 +192,61 @@ body {
 		margin: 0 auto;
 	}
 
-	.photo {
-		position: relative;
-		width: 1600px;
-		height: 500px;
-		background-size: cover;
-		background-position: center;
-		transition: rotate 2s;
-		margin-bottom: 50px;
-		// background-attachment: fixed;
-		box-shadow: 1px 1px 5px $dark-blue;
-	}
-	.one {
-		background-image: url('../img/NIK_0831.jpg');
-		max-width: 95%;
-	}
-	.two {
-		background-image: url('../img/F35-high-speed-pass.jpg');
-		background-position: center;
-		background-size: cover;
-		max-width: 95%;
-	}
-	.three {
-		background-image: url('../img/wiewiórecka.jpg');
-		background-position: center;
-		background-size: cover;
-		max-width: 95%;
-	}
+	// .photo {
+	// 	position: relative;
+	// 	width: 1600px;
+	// 	height: 500px;
+	// 	background-size: cover;
+	// 	background-position: center;
+	// 	transition: rotate 2s;
+	// 	margin-bottom: 50px;
+		
+	// 	box-shadow: 1px 1px 5px $dark-blue;
+	// }
+	// .one {
+	// 	background-image: url('../img/NIK_0831.jpg');
+	// 	max-width: 95%;
+	// }
+	// .two {
+	// 	background-image: url('../img/F35-high-speed-pass.jpg');
+	// 	background-position: center;
+	// 	background-size: cover;
+	// 	max-width: 95%;
+	// }
+	// .three {
+	// 	background-image: url('../img/wiewiórecka.jpg');
+	// 	background-position: center;
+	// 	background-size: cover;
+	// 	max-width: 95%;
+	// }
 
-	.photo-bg {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
-	}
+	// .photo-bg {
+	// 	position: absolute;
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	background-color: rgba(0, 0, 0, 0.3);
+	// }
 
-	.photo-text {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: 20%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.9);
-		z-index: 10;
-		color: #ddd;
-		padding: 30px 100px;
-		font-size: 1.5rem;
-		overflow: hidden;
-	}
+	// .photo-text {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	height: 20%;
+	// 	width: 100%;
+	// 	background-color: rgba(0, 0, 0, 0.9);
+	// 	z-index: 10;
+	// 	color: #ddd;
+	// 	padding: 30px 100px;
+	// 	font-size: 1.5rem;
+	// 	overflow: hidden;
+	// }
+
+	
+
+// Formularz kontaktowy, podstrona Kontakt
+// 
+// 
+
 
 	.contact-form {
 		position: relative;
@@ -306,28 +324,11 @@ body {
 		.send-btn:hover::after {
 			transform: translateX(300%);
 		}
-
-		// input:focus {
-		// 	outline: none;
-		// 	border: 1px solid #ddd;
-		// }
-
-		// input:focus ~ label {
-		// 	transform: translateY(-100%);
-		// 	font-weight: bold;
-
-		// }
-
-		// label {
-		// 	position: absolute;
-		// 	font-size: 2em;
-		// 	top: 25%;
-		// 	left: 5%;
-		// 	padding: 0 0.1em;
-		// 	transition: transform 0.3s;
-		// 	z-index: 100;
-		// }
 	}
+
+	// DO PODSTRONY NEWS i Home
+	// 
+	// 
 
 	.news {
 		width: 100%;
@@ -337,7 +338,7 @@ body {
 		align-items: flex-start;
 		padding: 2rem 0rem;
 
-		.news__title {
+		&__title {
 			font-size: 1.6rem;
 			margin: 2.5em 0;
 		}
@@ -378,7 +379,7 @@ body {
 			text-decoration: underline;
 		}
 
-		.zdj-image {
+		.news__image {
 			width: 100%;
 			margin-top: 30px;
 			margin-bottom: 30px;
@@ -398,6 +399,7 @@ body {
 			}
 		}
 	}
+
 
 	.blog__container {
 		width: 100%;
@@ -448,7 +450,7 @@ body {
 				font-size: 1.5em;
 				font-weight: bold;
 				padding: 1em;
-				
+
 				overflow: hidden;
 				cursor: pointer;
 
@@ -574,7 +576,6 @@ body {
 	}
 }
 
-
 // MEDIA QUERIES
 // ///////////////////////////////////////////////////////////
 
@@ -600,26 +601,36 @@ body {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
-				background: rgba(0, 0, 0, 0.9);
+				background: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(1px);
 				transform: translate(100%);
 
-				.link {
-					display: flex;
-					justify-content: center;
+				li {
+					width: 100%;
 				}
 
-				.link:hover {
+				.navbar__link {
+					
+					display: flex;
+					justify-content: center;
+				
+
+				&:hover {
 					background-color: $light-blue;
 				}
 			}
+			}
+			
 
 			.active {
 				transform: translate(0%);
 			}
 
-			.link::after {
+			.navbar__link::after {
 				opacity: 0;
 			}
+		
+		
 		}
 	}
 
@@ -666,6 +677,7 @@ body {
 	}
 }
 
+
 @media (max-width: 576px) {
 	.nav {
 		.nav__container {
@@ -687,9 +699,14 @@ body {
 				background: rgba(0, 0, 0, 0.9);
 				transform: translate(100%);
 
-				.link {
-					display: flex;
+				li {
+					width: 100%;
+
 				}
+				&__link {
+						display: flex;
+						justify-content: center;
+					}
 			}
 			.active {
 				transform: translate(0%);
@@ -724,7 +741,7 @@ body {
 				font-size: 1.1rem;
 			}
 
-			.zdj-image {
+			.news__image {
 				width: 100%;
 				margin-top: 30px;
 				margin-bottom: 30px;
@@ -746,13 +763,12 @@ body {
 		}
 
 		.photo {
-		.photo-text {
-
-			p {
-			font-size: 0.8rem;
+			.photo-text {
+				p {
+					font-size: 0.8rem;
+				}
 			}
 		}
-	}
 
 		.blog__container {
 			width: 100%;
