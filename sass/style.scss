@@ -110,6 +110,7 @@ body {
 		}
 
 		.navbar {
+			
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -149,7 +150,7 @@ body {
 
 			&:hover {
 				color: black;
-				font-weight: bold;
+				
 				text-shadow: 0px 0px 1px black;
 			}
 		}
@@ -400,6 +401,9 @@ body {
 		}
 	}
 
+	// Do podstrony Blog
+	// 
+	// 
 
 	.blog__container {
 		width: 100%;
@@ -520,37 +524,12 @@ body {
 		left: 130%;
 	}
 
-	.tooltip {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 50px;
-		// width: 300px;
-		// height: 100px;
-		background-color: none;
-
-		.fa-solid {
-			font-size: 50px;
-			color: royalblue;
-			position: relative;
-		}
-
-		.fa-solid::after {
-			position: absolute;
-			margin: 10px;
-			border: 1px solid black;
-			display: none;
-			font-size: 20px;
-			padding: 10px;
-		}
-
-		.fa-solid:hover::after {
-			content: 'info po najechaniu';
-			display: block;
-			right: -150%;
-		}
-	}
 }
+
+	// Do sekcji Zdjęcia
+	// 
+	// 
+	
 
 .footer {
 	display: flex;
@@ -580,9 +559,17 @@ body {
 // ///////////////////////////////////////////////////////////
 
 @media (min-width: 992px) {
+	
+	.nav {
+		&__container {
+
 	.hamburger {
 		display: none;
 	}
+}
+}
+
+
 }
 
 @media (max-width: 992px) {
@@ -672,6 +659,29 @@ body {
 				&-btn {
 					width: 50%;
 				}
+			}
+		}
+
+		.carousel {
+			&__container {
+		
+				.carousel__buttons {
+					
+					.btn-car {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+	}
+
+	.footer {
+
+		&__content {
+
+			h2 {
+				font-size: 1.2rem;
 			}
 		}
 	}
