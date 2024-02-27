@@ -31,7 +31,7 @@ body {
 	top: 0;
 	left: 0;
 	background-image: url('../img/NIK_4566.jpg');
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
 	background-position: center;
 	background-attachment: fixed;
@@ -621,7 +621,16 @@ body {
 		}
 	}
 
+	.hero-img {
+		height: 55vh;
+		background-image: url('../img/heo-sml.jpg');
+
+	}
+
 	.main {
+
+		
+
 		.title-hd {
 			font-size: 1.4rem;
 		}
@@ -725,7 +734,7 @@ body {
 	}
 
 	.hero-img {
-		height: 60vh;
+		height: 50vh;
 		background-image: url('../img/heo-sml.jpg');
 
 		.hero-text {
