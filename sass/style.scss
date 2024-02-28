@@ -9,13 +9,13 @@
 
 html {
 	scroll-padding-top: 70px;
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: #ddd;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 62.5%;
-	
 }
 
 .fa-solid {
@@ -23,8 +23,8 @@ body {
 }
 
 // HERO GRAFIKA
-// 
-// 
+//
+//
 
 .hero-img {
 	position: relative;
@@ -69,11 +69,24 @@ body {
 		width: 100%;
 		height: 100%;
 	}
+
+	.hero-btn {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		color: #ddd;
+		font-size: 3rem;
+		cursor: pointer;
+
+		&:hover {
+			color: $light-blue;
+		}
+	}
 }
 
 // NAWIGACJA
-// 
-// 
+//
+//
 
 .nav {
 	position: fixed;
@@ -110,14 +123,11 @@ body {
 		}
 
 		.navbar {
-			
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
 			list-style: none;
 			transition: 0.3s linear;
-
-		
 
 			&__link {
 				position: relative;
@@ -130,31 +140,30 @@ body {
 				font-size: 1.3rem;
 				transition: color 0.3s linear;
 				z-index: 10;
-			
 
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				width: 100%;
-				height: 0px;
-				background-color: #fff;
-				transition: height 0.4s ease-in-out;
-				z-index: -5;
-			}
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 0px;
+					background-color: #fff;
+					transition: height 0.4s ease-in-out;
+					z-index: -5;
+				}
 
-			&:hover::after {
-				height: 100%;
-			}
+				&:hover::after {
+					height: 100%;
+				}
 
-			&:hover {
-				color: black;
-				
-				text-shadow: 0px 0px 1px black;
+				&:hover {
+					color: black;
+
+					text-shadow: 0px 0px 1px black;
+				}
 			}
 		}
-	}
 		.hamburger {
 			color: #fff;
 			justify-content: flex-end;
@@ -164,8 +173,8 @@ body {
 }
 
 // Sekcja Main
-// 
-// 
+//
+//
 
 .main {
 	background-color: #ddd;
@@ -201,7 +210,7 @@ body {
 	// 	background-position: center;
 	// 	transition: rotate 2s;
 	// 	margin-bottom: 50px;
-		
+
 	// 	box-shadow: 1px 1px 5px $dark-blue;
 	// }
 	// .one {
@@ -242,12 +251,9 @@ body {
 	// 	overflow: hidden;
 	// }
 
-	
-
-// Formularz kontaktowy, podstrona Kontakt
-// 
-// 
-
+	// Formularz kontaktowy, podstrona Kontakt
+	//
+	//
 
 	.contact-form {
 		position: relative;
@@ -258,7 +264,7 @@ body {
 
 		&-heading {
 			font-size: 2.5em;
-			margin-bottom: 1em;
+			margin: 2em 0;
 		}
 
 		form {
@@ -328,8 +334,8 @@ body {
 	}
 
 	// DO PODSTRONY NEWS i Home
-	// 
-	// 
+	//
+	//
 
 	.news {
 		width: 100%;
@@ -402,8 +408,8 @@ body {
 	}
 
 	// Do podstrony Blog
-	// 
-	// 
+	//
+	//
 
 	.blog__container {
 		width: 100%;
@@ -523,13 +529,11 @@ body {
 	.btn:hover::before {
 		left: 130%;
 	}
-
 }
 
-	// Do sekcji Zdjęcia
-	// 
-	// 
-	
+// Do sekcji Zdjęcia
+//
+//
 
 .footer {
 	display: flex;
@@ -559,17 +563,13 @@ body {
 // ///////////////////////////////////////////////////////////
 
 @media (min-width: 992px) {
-	
 	.nav {
 		&__container {
-
-	.hamburger {
-		display: none;
+			.hamburger {
+				display: none;
+			}
+		}
 	}
-}
-}
-
-
 }
 
 @media (max-width: 992px) {
@@ -597,17 +597,14 @@ body {
 				}
 
 				.navbar__link {
-					
 					display: flex;
 					justify-content: center;
-				
 
-				&:hover {
-					background-color: $light-blue;
+					&:hover {
+						background-color: $light-blue;
+					}
 				}
 			}
-			}
-			
 
 			.active {
 				transform: translate(0%);
@@ -616,21 +613,15 @@ body {
 			.navbar__link::after {
 				opacity: 0;
 			}
-		
-		
 		}
 	}
 
 	.hero-img {
 		height: 55vh;
 		background-image: url('../img/heo-sml.jpg');
-
 	}
 
 	.main {
-
-		
-
 		.title-hd {
 			font-size: 1.4rem;
 		}
@@ -673,9 +664,7 @@ body {
 
 		.carousel {
 			&__container {
-		
 				.carousel__buttons {
-					
 					.btn-car {
 						font-size: 1.5rem;
 					}
@@ -683,19 +672,19 @@ body {
 			}
 		}
 
+		.photoshoots {
+			font-size: 1.2rem;
+		}
 	}
 
 	.footer {
-
 		&__content {
-
 			h2 {
 				font-size: 1.2rem;
 			}
 		}
 	}
 }
-
 
 @media (max-width: 576px) {
 	.nav {
@@ -720,12 +709,11 @@ body {
 
 				li {
 					width: 100%;
-
 				}
 				&__link {
-						display: flex;
-						justify-content: center;
-					}
+					display: flex;
+					justify-content: center;
+				}
 			}
 			.active {
 				transform: translate(0%);
@@ -807,6 +795,18 @@ body {
 					font-size: 1.5em;
 				}
 			}
+		}
+
+		.photoshoots {
+			font-size: 0.9rem;
+		}
+
+		.carousel__title {
+			font-size: 1.2rem;
+		}
+
+		.photo__text {
+			font-size: 1.1rem;
 		}
 	}
 }
