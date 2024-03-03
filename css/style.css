@@ -370,9 +370,9 @@ body {
 .main .contact-form .send-btn::after {
   content: "";
   position: absolute;
-  left: -50%;
+  left: -70%;
   top: 0;
-  width: 50%;
+  width: 70%;
   height: 100%;
   background-color: rgba(245, 243, 243, 0.094);
   transform: translateX(0%);
