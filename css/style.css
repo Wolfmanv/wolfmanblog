@@ -10,7 +10,7 @@
 }
 
 .underline {
-  width: 200px;
+  width: 150px;
   height: 4px;
   margin: 0 auto;
   background-color: #42bff5;
@@ -358,11 +358,10 @@ body {
 }
 .main .contact-form .send-btn {
   position: relative;
-  width: 20%;
-  min-width: 85px;
+  width: 130px;
   padding: 1em 0.2em;
   background-color: #1f2833;
-  border: 1px solid #1f2833;
+  box-shadow: 0px 0px 7px black;
   border-radius: 8px;
   color: #ddd;
   overflow: hidden;
@@ -373,16 +372,16 @@ body {
 .main .contact-form .send-btn::after {
   content: "";
   position: absolute;
-  left: -70%;
-  top: 0;
-  width: 70%;
-  height: 100%;
-  background-color: rgba(245, 243, 243, 0.094);
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
+  left: -150%;
+  bottom: 0;
+  width: 200px;
+  height: 150%;
+  rotate: -45deg;
+  background-color: rgba(224, 255, 255, 0.07);
+  transition: left 0.35s ease-in-out;
 }
 .main .contact-form .send-btn:hover::after {
-  transform: translateX(300%);
+  left: 110%;
 }
 .main .news {
   width: 100%;
@@ -446,6 +445,7 @@ body {
 }
 .main .blog__container {
   width: 100%;
+  margin: 3em 0;
   display: flex;
   justify-content: center;
 }
@@ -498,7 +498,7 @@ body {
   height: 100%;
   width: 100px;
   top: 0;
-  left: -40%;
+  left: -100%;
   rotate: -45deg;
   background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   transition: left 0.5s ease-in-out;
@@ -688,7 +688,7 @@ body {
     font-size: 1rem;
   }
   .main .title-hd {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .main .news {
     padding: 1rem 1rem;
@@ -733,7 +733,7 @@ body {
     font-size: 1.5em;
   }
   .main .photoshoots {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .main .carousel__title {
     font-size: 1.2rem;
