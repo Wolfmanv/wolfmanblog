@@ -1,5 +1,5 @@
 @use 'components' as *;
-@use 'colors' as *;
+@use 'variables' as *;
 
 * {
 	box-sizing: border-box;
@@ -126,6 +126,7 @@ body {
 		.navbar {
 			display: flex;
 			justify-content: flex-end;
+			height: 100%;
 			align-items: center;
 			list-style: none;
 			transition: 0.3s linear;
@@ -145,23 +146,21 @@ body {
 				&::after {
 					content: '';
 					position: absolute;
-					bottom: 0;
-					right: 0;
-					width: 100%;
-					height: 0px;
+					bottom: -2px;
+					left: 0;
+					width: 0;
+					height: 3px;
 					background-color: #fff;
-					transition: height 0.4s ease-in-out;
+					transition: width 0.35s linear;
 					z-index: -5;
 				}
 
 				&:hover::after {
-					height: 100%;
+					// height: 100%;
+					width: 100%;
 				}
 
-				&:hover {
-					color: black;
-					text-shadow: 0px 0px 1px black;
-				}
+				
 			}
 		}
 		.hamburger {
@@ -338,10 +337,9 @@ body {
 			text-decoration: underline;
 		}
 
-		.news__image {
+		&__image {
 			width: 100%;
-			margin-top: 30px;
-			margin-bottom: 30px;
+			margin: 30px 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -349,7 +347,7 @@ body {
 
 			img {
 				width: 100%;
-				box-shadow: 0px 0px 3px $dark-blue;
+				box-shadow: $standard-boxshadow;
 			}
 
 			figcaption {
@@ -377,7 +375,7 @@ body {
 			width: 30%;
 			height: auto;
 			border: 1px black solid;
-			box-shadow: 0px 0px 8px $dark-blue;
+			box-shadow: $standard-boxshadow;
 			transition: transform 0.4s ease-in-out;
 
 			&:hover {
@@ -407,7 +405,7 @@ body {
 				background-color: $dark-blue;
 				color: #ddd;
 				width: 85%;
-				box-shadow: 1px 1px 4px $dark-blue;
+				box-shadow: 1px 1px 4px black;
 				border-radius: 10px;
 				font-size: 1.5em;
 				font-weight: bold;
@@ -560,6 +558,7 @@ body {
 
 			.active {
 				transform: translate(0%);
+				backdrop-filter: blur(2px);
 			}
 
 			.navbar__link::after {
@@ -761,4 +760,9 @@ body {
 			font-size: 1rem;
 		}
 	}
+
+	// .gallery {
+	// 	grid-template-columns: 1fr 1fr 1fr;
+	// 	grid-template-rows: 1fr;
+	// }
 }
