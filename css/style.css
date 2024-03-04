@@ -391,9 +391,21 @@ body {
   align-items: flex-start;
   padding: 2rem 0rem;
 }
+.main .news .news-item {
+  margin: 4em 0;
+}
+.main .news-rdr2 {
+  order: 0;
+}
+.main .news-radom {
+  order: 2;
+}
+.main .news-nato {
+  order: 1;
+}
 .main .news__title {
   font-size: 1.6rem;
-  margin: 2.5em 0;
+  margin: 2em 0;
 }
 .main .news__text {
   font-size: 1.4rem;
@@ -692,6 +704,10 @@ body {
   }
   .main .news {
     padding: 1rem 1rem;
+    margin: 2em 0;
+  }
+  .main .news .date-time {
+    font-size: 0.7rem;
   }
   .main .news__text {
     font-size: 1.1rem;
@@ -740,5 +756,9 @@ body {
   }
   .main .photo__text {
     font-size: 1rem;
+  }
+  .main .gallery {
+    display: flex;
+    flex-direction: column;
   }
 }

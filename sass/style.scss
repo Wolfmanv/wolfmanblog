@@ -296,9 +296,25 @@ body {
 		align-items: flex-start;
 		padding: 2rem 0rem;
 
+		.news-item {
+			margin: 4em 0;
+		}
+
+		&-rdr2 {
+			order: 0;
+		}
+
+		&-radom {
+			order: 2;
+		}
+
+		&-nato {
+			order: 1;
+		}
+
 		&__title {
 			font-size: 1.6rem;
-			margin: 2.5em 0;
+			margin: 2em 0;
 		}
 
 		&__text {
@@ -695,6 +711,11 @@ body {
 
 		.news {
 			padding: 1rem 1rem;
+			margin: 2em 0;
+
+			.date-time {
+				font-size: 0.7rem;
+			}
 
 			&__text {
 				font-size: 1.1rem;
@@ -759,6 +780,11 @@ body {
 
 		.photo__text {
 			font-size: 1rem;
+		}
+
+		.gallery {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 
