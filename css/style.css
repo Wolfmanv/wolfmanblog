@@ -640,7 +640,7 @@ body {
     align-items: center;
   }
   .main .blog__container .blog__item {
-    width: 100%;
+    width: 70%;
     margin: 1em 1em;
   }
   .main .blog__container .blog__item-heading {
