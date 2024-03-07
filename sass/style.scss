@@ -417,7 +417,6 @@ body {
 				margin: 1em;
 			}
 
-
 			&-img {
 				object-fit: cover;
 				height: 50%;
@@ -425,7 +424,7 @@ body {
 
 			&-btn {
 				position: absolute;
-				bottom: 1%;
+				bottom: 2%;
 				background-color: $dark-blue;
 				color: #ddd;
 				width: 85%;
@@ -459,8 +458,6 @@ body {
 					left: 100%;
 				}
 			}
-
-			
 		}
 	}
 
@@ -511,7 +508,8 @@ body {
 	position: relative;
 	width: 100%;
 	height: 70px;
-	background-color: $dark-blue;
+	background-color: rgba(0, 0, 0, 0.9);
+	box-shadow: $standard-boxshadow;
 	color: #ddd;
 
 	&__content {
@@ -540,6 +538,8 @@ body {
 				display: none;
 			}
 		}
+
+	
 	}
 }
 
@@ -586,6 +586,10 @@ body {
 			.navbar__link::after {
 				opacity: 0;
 			}
+
+			.dropdown-items {
+				display: none;
+			}
 		}
 	}
 
@@ -621,8 +625,6 @@ body {
 				width: 70%;
 				margin: 2em 1em;
 
-
-
 				&-heading {
 					font-size: 1.24rem;
 				}
@@ -638,12 +640,8 @@ body {
 				&-img {
 					height: 60%;
 					object-fit: cover;
-					
 				}
-				
 			}
-
-			
 		}
 
 		.carousel {
