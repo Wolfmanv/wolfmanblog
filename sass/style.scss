@@ -392,6 +392,7 @@ body {
 			width: 30%;
 			height: 800px;
 			border: 1px black solid;
+			border-radius: 4px;
 			box-shadow: $standard-boxshadow;
 			transition: transform 0.4s ease-in-out;
 
@@ -424,12 +425,12 @@ body {
 
 			&-btn {
 				position: absolute;
-				bottom: 2%;
+				bottom: 4%;
 				background-color: $dark-blue;
 				color: #ddd;
 				width: 85%;
 				box-shadow: 1px 1px 4px black;
-				border-radius: 10px;
+				border-radius: 8px;
 				font-size: 1.5em;
 				font-weight: bold;
 				padding: 1em;
@@ -499,9 +500,7 @@ body {
 	}
 }
 
-// Do sekcji Zdjęcia
-//
-//
+
 
 .footer {
 	display: flex;
@@ -523,7 +522,7 @@ body {
 			transform: translate(-50%, -50%);
 			left: 50%;
 			font-size: 1.7rem;
-			text-shadow: 0px 0px 2px cyan;
+			// text-shadow: 0px 0px 2px black;
 		}
 	}
 }
@@ -634,6 +633,7 @@ body {
 				}
 
 				&-btn {
+					bottom: 2%;
 					width: 50%;
 				}
 
@@ -779,6 +779,10 @@ body {
 
 				&-text {
 					font-size: 1rem;
+				}
+
+				&-btn {
+					bottom: 1%;
 				}
 			}
 		}

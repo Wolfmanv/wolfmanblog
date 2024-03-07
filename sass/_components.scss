@@ -36,16 +36,16 @@
 		width: 120%;
 		padding: 1em 0;
 		margin: .7em 0;
-		background-color: rgba(0, 0, 0, .7);
+		background-color: rgba(0, 0, 0, .8);
+		border-radius: 4px;
 		display: flex;
 		flex-direction: column;
-		gap: 1em;
 		align-items: center;
 		justify-content: center;
+		gap: 1em;
 		font-size: 1rem;
-		opacity: 0;
 		transition: opacity .3s ease-in-out;
-		border-radius: 4px;
+		opacity: 0;
 	
 
 	}
@@ -58,6 +58,7 @@
 
 		&:hover {
 			color: $light-blue;
+			
 		}
 	}
 
