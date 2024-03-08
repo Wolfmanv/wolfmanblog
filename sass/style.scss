@@ -141,7 +141,7 @@ body {
 				color: #ddd;
 				margin: 0 1em;
 				padding: 2px 20px;
-				font-size: 1.3rem;
+				font-size: 1.4rem;
 				transition: color 0.3s linear;
 				z-index: 10;
 
@@ -195,7 +195,7 @@ body {
 		text-align: center;
 		letter-spacing: 1px;
 		margin-bottom: 10px;
-		margin-top: 100px;
+		margin-top: 5em;
 	}
 
 	p {
@@ -297,7 +297,7 @@ body {
 		padding: 2rem 0rem;
 
 		.news-item {
-			margin: 4em 0;
+			margin: 15em 0;
 		}
 
 		&-rdr2 {
@@ -319,6 +319,7 @@ body {
 
 		&__text {
 			font-size: 1.2rem;
+			text-align: justify;
 			margin: 15px 0;
 			line-height: 2em;
 		}
@@ -401,12 +402,14 @@ body {
 			}
 
 			&-heading {
-				padding: 1em 1em;
+				padding: 0.5em 1em;
+				padding-top: 1em;
 				font-size: 1.1rem;
 			}
 
 			&-text {
-				padding: 1em 1.1em;
+				padding: 1em 1em;
+				text-align: justify;
 				font-size: 1.1rem;
 				margin-bottom: 1em;
 			}
@@ -429,11 +432,11 @@ body {
 				background-color: $dark-blue;
 				color: #ddd;
 				width: 75%;
-				box-shadow: 1px 1px 4px black;
+				box-shadow: 0px 0px 5px #33333387;
 				border-radius: 8px;
 				font-size: 1.5em;
 				font-weight: bold;
-				padding: 1em;
+				padding: 0.7em;
 
 				overflow: hidden;
 				cursor: pointer;
@@ -500,8 +503,6 @@ body {
 	}
 }
 
-
-
 .footer {
 	display: flex;
 	position: relative;
@@ -537,8 +538,6 @@ body {
 				display: none;
 			}
 		}
-
-	
 	}
 }
 
@@ -734,6 +733,10 @@ body {
 				font-size: 0.9rem;
 			}
 
+			.news-item {
+				margin: 5em 0;
+			}
+			
 			.news__image {
 				width: 100%;
 				margin-top: 30px;
