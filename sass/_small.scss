@@ -97,26 +97,29 @@
 			}
 		}
 
-		.blog__container {
-			width: 100%;
+	.blog__container {
+			
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
 			.blog__item {
-				width: 90%;
-				margin: 1em 1em;
+				width: 320px;
+				height: 570px;
+				
 
 				&-heading {
-					font-size: 1.1rem;
-				}
-
-				&-text {
 					font-size: 1rem;
 				}
 
+				&-text {
+					font-size: .9rem;
+				}
+
 				&-btn {
-					bottom: 1%;
+					bottom: 2%;
+					width: 12em;
+					font-size: .7rem;
 				}
 			}
 		}

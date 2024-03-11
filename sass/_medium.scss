@@ -87,7 +87,8 @@
 			align-items: center;
 
 			.blog__item {
-				width: 70%;
+				width: 400px;
+				height: 750px;
 				margin: 2em 1em;
 
 				&-heading {
@@ -99,12 +100,12 @@
 				}
 
 				&-btn {
-					bottom: 2%;
-					width: 50%;
+					bottom: 3%;
+					width: 12em;
 				}
 
 				&-img {
-					height: 60%;
+					height: 55%;
 					object-fit: cover;
 				}
 			}
