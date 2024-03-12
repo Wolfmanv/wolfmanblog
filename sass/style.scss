@@ -191,11 +191,15 @@ body {
 	}
 
 	.title-hd {
+		width: fit-content;
+		margin: 0 auto;
 		font-size: 2rem;
 		text-align: center;
 		letter-spacing: 1px;
 		margin-bottom: 10px;
 		margin-top: 3em;
+		border-bottom: 4px solid $light-blue;
+		
 	}
 
 	p {
@@ -397,7 +401,6 @@ body {
 			border: 1px black solid;
 			border-radius: 4px;
 			box-shadow: $standard-boxshadow;
-			transition: transform 0.4s ease-in-out;
 
 			&:hover {
 				border: 2px solid black;
@@ -410,7 +413,7 @@ body {
 			}
 
 			&-text {
-				padding: .5em 1em;
+				padding: 0.5em 1em;
 				text-align: justify;
 				line-height: 1.4em;
 				font-size: 1.1rem;
@@ -432,7 +435,6 @@ body {
 			}
 
 			&-btn {
-				
 				position: absolute;
 				bottom: 3%;
 				background-color: $dark-blue;
