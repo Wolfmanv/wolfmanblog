@@ -73,11 +73,12 @@ body {
 	.hero-btn {
 		position: absolute;
 		bottom: 10%;
+		color: #ddd;
 		left: 50%;
 		transform: translateX(-50%);
-		color: #ddd;
 		font-size: 3rem;
 		cursor: pointer;
+		animation: bouncing 2s infinite;
 
 		&:hover {
 			color: $light-blue;
@@ -106,13 +107,18 @@ body {
 		align-items: center;
 
 		.hamburger {
-			font-size: 1.5em;
+			font-size: 1.8em;
+			color: #fff;
+			margin: 2em;
+			justify-self: flex-end;
+			
 		}
 
 		.logo {
 			font-size: 2em;
 			color: $light-blue;
 			letter-spacing: 1px;
+			margin: 0 1em;
 
 			h1 {
 				font-size: 25px;
@@ -163,11 +169,7 @@ body {
 				}
 			}
 		}
-		.hamburger {
-			color: #fff;
-			justify-content: flex-end;
-			margin: 20px;
-		}
+		
 	}
 }
 
@@ -199,7 +201,6 @@ body {
 		margin-bottom: 10px;
 		margin-top: 3em;
 		border-bottom: 4px solid $light-blue;
-		
 	}
 
 	p {

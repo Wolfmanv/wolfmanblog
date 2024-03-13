@@ -180,6 +180,17 @@
   border: 1px dashed #333;
 }
 
+@keyframes bouncing {
+  0% {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 8%;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -243,11 +254,12 @@ body {
 .hero-img .hero-btn {
   position: absolute;
   bottom: 10%;
+  color: #ddd;
   left: 50%;
   transform: translateX(-50%);
-  color: #ddd;
   font-size: 3rem;
   cursor: pointer;
+  animation: bouncing 2s infinite;
 }
 .hero-img .hero-btn:hover {
   color: #42bff5;
@@ -271,12 +283,16 @@ body {
   align-items: center;
 }
 .nav__container .hamburger {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  color: #fff;
+  margin: 2em;
+  justify-self: flex-end;
 }
 .nav__container .logo {
   font-size: 2em;
   color: #42bff5;
   letter-spacing: 1px;
+  margin: 0 1em;
 }
 .nav__container .logo h1 {
   font-size: 25px;
@@ -318,11 +334,6 @@ body {
 }
 .nav__container .navbar__link:hover::after {
   width: 100%;
-}
-.nav__container .hamburger {
-  color: #fff;
-  justify-content: flex-end;
-  margin: 20px;
 }
 
 .main {
@@ -646,7 +657,7 @@ body {
   }
   .nav .nav__container {
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .nav .nav__container .navbar {
     position: absolute;
@@ -736,7 +747,7 @@ body {
 @media (max-width: 576px) {
   .nav .nav__container {
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .nav .nav__container .navbar {
     position: absolute;
