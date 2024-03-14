@@ -399,12 +399,12 @@ body {
 			flex-direction: column;
 			width: 400px;
 			height: 800px;
-			border: 1px black solid;
+			border: 1px solid black;
 			border-radius: 4px;
 			box-shadow: $standard-boxshadow;
 
 			&:hover {
-				border: 2px solid black;
+				border: 1px solid transparent;
 			}
 
 			&-heading {
