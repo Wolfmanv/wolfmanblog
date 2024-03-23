@@ -17,25 +17,33 @@
 	<body>
 		<nav class="nav">
 			<div class="nav__container wrapper">
-			<div class="logo">
-				<h1>Wolfman<span>BLOG</span></h1>
+				<div class="logo">
+					<h1>Wolfman<span>BLOG</span></h1>
+				</div>
+				<div class="hamburger">
+					<i class="fa-solid fa-bars fa-lg"></i>
+				</div>
+				<ul class="navbar wrapper">
+					<li><a href="index.html#title" class="navbar__link"> Home</a></li>
+					<li><a href="news.html#title" class="navbar__link"> Newsy </a></li>
+					<li><a href="blog.html#title" class="navbar__link"> Blog </a></li>
+					<li class="dropdown">
+						<a href="zdjecia.html#title" class="navbar__link"> Zdjęcia </a>
+						<div class="dropdown-items">
+							<a href="radom.html#title" class="dropdown-item"
+								>Radom Air Show</a
+							>
+							<a href="natodays.html#title" class="dropdown-item">NATO Days</a>
+							<a href="miejskie.html#title" class="dropdown-item"
+								>Miasto, przyroda</a
+							>
+						</div>
+					</li>
+					<li>
+						<a href="kontakt.html#title" class="navbar__link"> Kontakt </a>
+					</li>
+				</ul>
 			</div>
-			<div class="hamburger">
-				<i class="fa-solid fa-bars fa-lg"></i>
-			</div>
-			<ul class="navbar wrapper">
-				<li><a href="index.html#title" class="navbar__link"> Home</a></li>
-				<li><a href="news.html#title" class="navbar__link "> Newsy </a></li>
-				<li><a href="blog.html#title" class="navbar__link"> Blog </a></li>
-				<li class="dropdown"><a href="zdjecia.html#title" class="navbar__link"> Zdjęcia </a><div class="dropdown-items">
-					<a href="radom.html#title" class="dropdown-item">Radom Air Show</a>
-					<a href="natodays.html#title" class="dropdown-item">NATO Days</a>
-					<a href="miejskie.html#title" class="dropdown-item">Miasto, przyroda</a>
-				
-				</div></li>
-				<li><a href="kontakt.html#title" class="navbar__link"> Kontakt </a></li>
-			</ul>
-		</div>
 		</nav>
 
 		<div class="hero-img">
@@ -49,7 +57,6 @@
 
 		<main class="main wrapper">
 			<h1 class="title-hd" id="title">Zdjęcia</h1>
-		
 
 			<ul class="photoshoots">
 				<li class="photoshoots-item">
@@ -58,7 +65,9 @@
 					>
 				</li>
 				<li class="photoshoots-item">
-					<a href="natodays.html#title"><i class="fa-solid fa-camera"></i> NATO Days Ostrava </a>
+					<a href="natodays.html#title"
+						><i class="fa-solid fa-camera"></i> NATO Days Ostrava
+					</a>
 				</li>
 				<li class="photoshoots-item">
 					<a href="miejskie.html#title"
@@ -66,7 +75,12 @@
 						miejskie</a
 					>
 				</li>
-			</ul>
+				<!-- <li class="photoshoots-item">
+					<a href="miejskie.html#title"
+						><i class="fa-solid fa-camera"></i>Spotting w Balicach</a
+					>
+				</li>
+			</ul> -->
 
 			<!-- <div class="carousel">
 				<h2 class="carousel__title">Air Show Radom 2023</h2>
